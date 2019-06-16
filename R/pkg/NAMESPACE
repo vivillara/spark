@@ -60,6 +60,7 @@ exportMethods("glm",
               "spark.kstest",
               "spark.logit",
               "spark.decisionTree",
+              "spark.oneVsRest",
               "spark.randomForest",
               "spark.gbt",
               "spark.bisectingKmeans",
@@ -453,6 +454,7 @@ export("as.DataFrame",
        "read.ml",
        "print.summary.KSTest",
        "print.summary.DecisionTreeRegressionModel",
+	    "print.summary.OneVsRestModel",
        "print.summary.DecisionTreeClassificationModel",
        "print.summary.RandomForestRegressionModel",
        "print.summary.RandomForestClassificationModel",
@@ -495,6 +497,7 @@ S3method(print, summary.GeneralizedLinearRegressionModel)
 S3method(print, summary.KSTest)
 S3method(print, summary.DecisionTreeRegressionModel)
 S3method(print, summary.DecisionTreeClassificationModel)
+S3method(print, summary.OneVsRestModel)
 S3method(print, summary.RandomForestRegressionModel)
 S3method(print, summary.RandomForestClassificationModel)
 S3method(print, summary.GBTRegressionModel)

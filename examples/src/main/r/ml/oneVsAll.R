@@ -1,5 +1,3 @@
-#!/bin/bash
-
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -17,21 +15,18 @@
 # limitations under the License.
 #
 
-# This scripts packages the SparkR source files (R and C files) and
-# creates a package that can be loaded in R. The package is by default installed to
-# $FWDIR/lib and the package can be loaded by using the following command in R:
-#
-#   library(SparkR, lib.loc="$FWDIR/lib")
-#
-# NOTE(shivaram): Right now we use $SPARK_HOME/R/lib to be the installation directory
-# to load the SparkR package on the worker nodes.
+# To run this example use
+# ./bin/spark-submit examples/src/main/r/ml/oneVsAll.R
 
-set -o pipefail
-set -e
+# Load SparkR library into your R session
+library(SparkR)
 
-FWDIR="$(cd "`dirname "${BASH_SOURCE[0]}"`"; pwd)"
-pushd "$FWDIR" > /dev/null
-. "$FWDIR/find-r.sh"
+# Initialize SparkSession
+sparkR.session(appName = "SparkR-ML-oneVsAll-example")
 
-# Generate Rd files if devtools is installed
-"$R_SCRIPT_PATH/Rscript" -e " if('devtools' %in% rownames(installed.packages())) { library(devtools); devtools::document(pkg='./pkg', roclets=c('rd')) }"
+
+# $example on:regression$
+# Load training data
+df <- read.df("data/mllib/sample_linear_regression_data.txt", source = "libsvm")
+training <- df
+test <- df

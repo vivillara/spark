@@ -1465,6 +1465,11 @@ setGeneric("spark.decisionTree",
 #' @rdname spark.randomForest
 setGeneric("spark.randomForest",
            function(data, formula, ...) { standardGeneric("spark.randomForest") })
+		   
+#' @rdname spark.oneVsRest
+#' @export
+setGeneric("spark.oneVsRest",
+           function(data, formula, ...) { standardGeneric("spark.oneVsRest") })
 
 #' @rdname spark.survreg
 setGeneric("spark.survreg", function(data, formula, ...) { standardGeneric("spark.survreg") })

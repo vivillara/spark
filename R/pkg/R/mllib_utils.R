@@ -113,6 +113,8 @@ read.ml <- function(path) {
     new("DecisionTreeRegressionModel", jobj = jobj)
   } else if (isInstanceOf(jobj, "org.apache.spark.ml.r.DecisionTreeClassifierWrapper")) {
     new("DecisionTreeClassificationModel", jobj = jobj)
+  } else if (isInstanceOf(jobj, "org.apache.spark.ml.r.OneVsRestWrapper")) {
+    new("OneVsRestModel", jobj = jobj)
   } else if (isInstanceOf(jobj, "org.apache.spark.ml.r.GBTRegressorWrapper")) {
     new("GBTRegressionModel", jobj = jobj)
   } else if (isInstanceOf(jobj, "org.apache.spark.ml.r.GBTClassifierWrapper")) {

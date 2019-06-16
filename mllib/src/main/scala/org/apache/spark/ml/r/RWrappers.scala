@@ -64,6 +64,8 @@ private[r] object RWrappers extends MLReader[Object] {
         DecisionTreeRegressorWrapper.load(path)
       case "org.apache.spark.ml.r.DecisionTreeClassifierWrapper" =>
         DecisionTreeClassifierWrapper.load(path)
+      case "org.apache.spark.ml.r.OneVsRestWrapper" =>
+        OneVsRestWrapper.load(path)
       case "org.apache.spark.ml.r.GBTRegressorWrapper" =>
         GBTRegressorWrapper.load(path)
       case "org.apache.spark.ml.r.GBTClassifierWrapper" =>

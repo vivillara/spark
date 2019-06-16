@@ -1,0 +1,19 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\mllib",
+    "\\mllib\\src",
+    "\\mllib\\src\\main",
+    "\\mllib\\src\\main\\scala",
+    "\\mllib\\src\\main\\scala\\org",
+    "\\mllib\\src\\main\\scala\\org\\apache",
+    "\\mllib\\src\\main\\scala\\org\\apache\\spark",
+    "\\mllib\\src\\main\\scala\\org\\apache\\spark\\ml",
+    "\\mllib\\src\\main\\scala\\org\\apache\\spark\\ml\\r",
+    "\\R",
+    "\\R\\pkg",
+    "\\R\\pkg\\R"
+  ],
+  "SelectedNode": "\\R\\pkg\\R\\generics.R",
+  "PreviewInSolutionExplorer": false
+}
